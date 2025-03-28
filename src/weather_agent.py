@@ -25,7 +25,7 @@ class WeatherAgent:
             data = response.json()
             if "results" in data and data["results"]:
                 return data["results"][0]["latitude"], data["results"][0]["longitude"]
-        return None, None  # Return None if no data found
+        return None, None
 
     def get_weather(self, country):
         lat, lon = self.get_lat_lon(country)
