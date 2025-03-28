@@ -1,69 +1,124 @@
-# Smart Tour Planner 🤖🌍
+# 🌍 Agentic Travel Companion
 
-Welcome to **Smart Tour Planner**, an AI-powered chatbot designed to make your travel planning easy, interactive, and fun! With just a few clicks, you’ll get personalized travel advice, including weather updates, budgeting tips, food recommendations, cultural insights, and hotel suggestions for your trip.
+## 🚀 Project Overview
 
-## Features
+Agentic Travel Companion is an intelligent AI-powered Streamlit application that transforms travel planning into an interactive, personalized experience. Leveraging multiple specialized AI agents, this chatbot provides comprehensive travel assistance from destination selection to detailed trip planning.
 
-- **Weather Forecast**: Get real-time weather updates for your chosen destination.
-- **Pre-Planning**: Receive travel tips, packing suggestions, and essential recommendations for your destination.
-- **Budgeting**: Estimate your total travel budget based on your destination and duration of stay.
-- **Food & Culture**: Discover famous local dishes and learn about the rich cultural heritage of the country.
-- **Hotel & Places**: Find the best hotels and top places to visit for an unforgettable experience.
-- **Interactive Chatbot**: A friendly AI assistant that helps you plan your trip step by step.
+## ✨ Key Features
 
-## Technologies Used
+- **Destination Weather Insights**: Real-time weather forecasting
+- **Personalized Itinerary Planning**: Custom trip recommendations
+- **Budget Estimation**: Tailored financial guidance
+- **Culinary Exploration**: Local food and culture insights
+- **Accommodation Suggestions**: Hotel and tourist spot recommendations
 
-- **Streamlit**: Building the interactive chatbot interface.
-- **Mistral 7B LLM**: Using a large language model to generate responses and travel recommendations.
-- **Weather API**: Fetching live weather data for your selected country.
+## 🤖 AI Agents Ecosystem
 
-## How It Works
+The application comprises five specialized agents:
 
-**Follow these steps to plan your trip using the Smart Tour Planner chatbot**:
+1. **Weather Expert Agent**
+   - Provides accurate weather forecasts
+   - Retrieves real-time meteorological data
 
-1. **Enter Your Destination**  
-   The chatbot will ask you to enter the **country** you want to visit.  
-   After submission, it will provide you with the **current weather** update for your chosen country.
+2. **Pre-Planning Agent**
+   - Generates comprehensive travel itineraries
+   - Offers packing tips and travel advice
 
-2. **Pre-Planning**  
-   The chatbot will ask if you would like to pre-plan your trip. If you choose **Yes**, it will then ask **how many days** you plan to stay.  
-   Based on the number of days, it will give you **packing suggestions**, **travel tips**, and **pre-travel recommendations** for the destination.
+3. **Budgeting Agent**
+   - Estimates travel costs
+   - Breaks down expenses for flights, hotels, and daily expenditures
 
-3. **Budgeting**  
-   You will then be asked for your **estimated budget** for the trip (in USD).  
-   The chatbot will calculate the budget based on your **country**, **number of days**, and provide you with an estimate covering **flights, hotels, food**, and **local transport**.
+4. **Food & Culture Agent**
+   - Recommends local cuisines
+   - Highlights cultural experiences and traditions
 
-4. **Food & Culture**  
-   Next, the chatbot will ask if you'd like to know about **delicious local foods** and **cultural heritage**.  
-   It will provide you with recommendations about the top **local dishes** and insights into the **cultural experiences** of the country.
+5. **Hotels & Places Agent**
+   - Suggests accommodations
+   - Identifies must-visit tourist attractions
 
-5. **Hotels & Places to Visit**  
-   Finally, the chatbot will suggest the **best hotels** and **places to visit** in your selected country.  
-   You’ll get recommendations for luxurious hotels, hidden gems, and top tourist attractions.
+## 🛠 Technology Stack
 
-6. **Completion**  
-   After all steps, the chatbot will display a **success message** confirming that your travel plan is ready! You can then proceed with your trip, and if you want to plan another one, simply refresh the page to start over.
+- **Framework**: Streamlit
+- **AI Framework**: CrewAI
+- **Large Language Model**: Mistral 7B
+- **APIs**: 
+  - Weather API
+  - Geocoding API
+- **Deployment**: Ollama for local LLM inference
 
-## LLM Model
+## 📋 Prerequisites
 
-We are using **Mistral 7B**, a large language model, to power the conversational aspect of the app and generate travel recommendations. The model provides accurate and rich insights throughout the entire planning process.
+- Python 3.8+
+- Ollama
+- Mistral LLM
+- Weather API Credentials
+- Geocoding API Credentials
 
-In future updates, we plan to experiment with lower-parameter models to check efficiency and performance, ensuring that the chatbot remains fast and responsive.
-
-## Installation
-
-To run **Smart Tour Planner** on your local machine:
+## 🚀 Installation Steps
 
 1. Clone the repository:
-   
-   ```bash
-   git clone https://github.com/your-username/smart-tour-planner.git
-   cd smart-tour-planner
-2. Create a virtual environment:
-    ```bash
-    python -m venv venv
-3. Activate the virtual environment:
-4. Install the dependencies:
-    ```bash
-    pip install -r requirements.txt
-5. Create a .env file for API keys (necessary for weather)
+```bash
+git clone https://github.com/yourusername/agentic-travel-companion.git
+cd agentic-travel-companion
+```
+
+2. Create virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up environment variables:
+```bash
+# Create a .env file in the project root
+WEATHER_API_URL=your_weather_api_url
+GEO_API_URL=your_geocoding_api_url
+```
+
+## 🔧 Running the Application
+
+```bash
+streamlit run src/chatbot.py
+```
+
+## 🌐 Usage Workflow
+
+1. Select destination country
+2. View weather forecast
+3. Generate trip itinerary
+4. Estimate travel budget
+5. Explore local cuisine
+6. Get hotel and place recommendations
+
+## 📈 Future Enhancements
+
+- Multilingual support
+- More advanced AI agent capabilities
+- Enhanced personalization
+- Integration with booking platforms
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
+
+## 📄 License
+
+MIT License
+
+## 🙏 Acknowledgements
+
+- CrewAI
+- Mistral AI
+- Streamlit
+- Ollama
+
+**Happy Traveling! 🌍✈️**
